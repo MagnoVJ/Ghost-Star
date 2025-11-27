@@ -1,6 +1,8 @@
 #include <glad/glad.h>
 #include <GLFW/glfw3.h>
 
+#include <stb_image.h>
+
 #include <iostream>
 
 void framebuffer_size_callback(GLFWwindow* window, int width, int height);
@@ -21,6 +23,17 @@ int main() {
         return -1;
     }
 
+    // Change default application icon
+    int appImageWidth, appImageHeight, appImageChannels;
+    unsigned char* appImagePixels = stbi_load("./assets/GhoststarFINISHED.png", &appImageWidth, &appImageHeight, &appImageChannels, 4);
+
+    GLFWimage images[1];
+    images[0].width = appImageWidth;
+    images[0].height = appImageHeight;
+    images[0].pixels = appImagePixels;
+
+    glfwSetWindowIcon(window, 1, images);
+    
     glfwMakeContextCurrent(window);
     glfwSetFramebufferSizeCallback(window, framebuffer_size_callback);
 

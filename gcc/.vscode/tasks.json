@@ -1,0 +1,30 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "build",
+            "type": "shell",
+            "command": "g++",
+            "args": [
+                "C:/projects/Ghost-Star/gcc/src/main.cpp",
+                "C:/projects/Ghost-Star/gcc/src/glad.c",
+                "C:/projects/Ghost-Star/gcc/src/stb_image.cpp",
+                "C:/projects/Ghost-Star/gcc/src/framebuffer_ex_lopengl.cpp",
+                "C:/projects/Ghost-Star/gcc/src/shader.cpp",
+                "C:/projects/Ghost-Star/gcc/src/camera.cpp",
+                "C:/projects/Ghost-Star/gcc/src/model.cpp",
+                "C:/projects/Ghost-Star/gcc/src/mesh.cpp",
+                "-I", "C:/projects/Ghost-Star/gcc/Dependencies/GLAD/include",
+                "-I", "C:/projects/Ghost-Star/gcc/Dependencies/GLFW/include",
+                "-I", "C:/projects/Ghost-Star/gcc/Dependencies/stb_image/include",
+                "-I", "C:/projects/Ghost-Star/gcc/Dependencies/GLM/include",
+                "-L", "C:/projects/Ghost-Star/gcc/Dependencies/GLFW/lib-mingw-w64",
+                "-lglfw3dll",
+                "-lopengl32",
+                "-lgdi32",
+                "-o", "C:/projects/Ghost-Star/gcc/Debug/app.exe"
+            ],
+            "problemMatcher": []
+        }
+    ]
+}
